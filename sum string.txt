@@ -1,0 +1,12 @@
+N=int(input())
+l=input().split()
+for i in range(N):
+  for j in range(0,N-i-1):
+    s1=sum(int(d) for d in str(l[j]))
+    s2=sum(int(d) for d in str(l[j+1]))
+    if s1>s2 or (s1==s2 and l[j]<l[j+1]):
+      l[j],l[j+1]=l[j+1],l[j]
+print(l)
+for i in l:
+  print(i,end=" ")
+
